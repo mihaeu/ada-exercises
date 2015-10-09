@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/mike/workspace/ada-exercises/variable_swap/variable_swap.gpr
+20151009153833
+[BOUND OBJECT FILES]
+/home/mike/workspace/ada-exercises/variable_swap/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/mike/workspace/ada-exercises/variable_swap/obj/
+-L/home/mike/workspace/ada-exercises/variable_swap/obj/
+-L/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/
+-static
+-static-libgcc
+/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/libgnat.a
