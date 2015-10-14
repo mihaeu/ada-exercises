@@ -198,9 +198,9 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /home/mike/workspace/ada-exercises/obj/main.o
-   --   -L/home/mike/workspace/ada-exercises/obj/
-   --   -L/home/mike/workspace/ada-exercises/obj/
+   --   /home/mike/workspace/ada-exercises/hello_world/obj/main.o
+   --   -L/home/mike/workspace/ada-exercises/hello_world/obj/
+   --   -L/home/mike/workspace/ada-exercises/hello_world/obj/
    --   -L/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/
    --   -static
    --   -lgnat
