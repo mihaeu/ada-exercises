@@ -35,27 +35,44 @@ procedure Main is
          -- or we find the right spot for insertion
          while current_node /= null loop
 
-            count := count + 1;
+            -- current node is greater so we need to insert before
+            if current_node.element > element then
+
+               if current_node = list then
+
+                  list := new node'(element, null);
+                  list.next := current_node;
+                  exit;
+
+               end if;
+
+               prev_node.next := new node'(element, null);
+               prev_node.next.next := current_node;
+               Put_Line("Inserting");
+               exit;
 
             -- last element
-            if current_node.next = null then
+            elsif current_node.next = null then
 
                current_node.next := new node'(element, null);
                exit;
 
             end if;
 
+            count := count + 1;
             prev_node := current_node;
             current_node := current_node.next;
 
          end loop;
       end if;
-      Put("Ran through list " & Integer'Image(count) & " times.");
+      Put_Line("---");
+      Put_Line("Checked " & Integer'Image(count) & " nodes.");
    end insert;
 
    procedure put (list: in p_node) is
       current_node : p_node := list;
    begin
+      Put("List: ");
       loop
          Put(current_node.element);
          current_node := current_node.next;
@@ -66,6 +83,10 @@ procedure Main is
    end;
 
 begin
+
+   Put_Line("====================================================");
+   Put_Line("Insert order: 1 2 3 4 5");
+
    insert(one, list);
    put(list);
    insert(two, list);
@@ -76,4 +97,36 @@ begin
    put(list);
    insert(five, list);
    put(list);
+
+   Put_Line("====================================================");
+   Put_Line("Insert order: 3 4 1 5 1");
+
+   list := null;
+   insert(three, list);
+   put(list);
+   insert(four, list);
+   put(list);
+   insert(one, list);
+   put(list);
+   insert(five, list);
+   put(list);
+   insert(one, list);
+   put(list);
+
+   Put_Line("====================================================");
+   Put_Line("Insert order: 5 4 3 2 1");
+
+   list := null;
+   insert(five, list);
+   put(list);
+   insert(four, list);
+   put(list);
+   insert(three, list);
+   put(list);
+   insert(two, list);
+   put(list);
+   insert(one, list);
+   put(list);
+
+
 end Main;
