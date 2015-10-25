@@ -1,5 +1,8 @@
-with Ada.Text_IO, Ada.Integer_Text_IO;
-use Ada.Text_IO, Ada.Integer_Text_IO;
+with Ada.Text_IO;                     use Ada.Text_IO;
+with Ada.Integer_Text_IO;             use Ada.Integer_Text_IO;
+with Ada.Strings.Unbounded;           use Ada.Strings.Unbounded;
+with Ada.Text_IO.Unbounded_IO;        use Ada.Text_IO.Unbounded_IO;
+with Ada.Strings.Fixed;               use Ada.Strings.Fixed;
 
 procedure Main is
    type node;
@@ -38,6 +41,7 @@ procedure Main is
             -- current node is greater so we need to insert before
             if current_node.element > element then
 
+               -- special case: first item
                if current_node = list then
 
                   list := new node'(element, null);
@@ -48,10 +52,9 @@ procedure Main is
 
                prev_node.next := new node'(element, null);
                prev_node.next.next := current_node;
-               Put_Line("Inserting");
                exit;
 
-            -- last element
+            -- insert as last element
             elsif current_node.next = null then
 
                current_node.next := new node'(element, null);
@@ -65,68 +68,87 @@ procedure Main is
 
          end loop;
       end if;
-      Put_Line("---");
-      Put_Line("Checked " & Integer'Image(count) & " nodes.");
+
    end insert;
 
    procedure put (list: in p_node) is
       current_node : p_node := list;
    begin
+
       Put("List: ");
       loop
+
          Put(current_node.element);
          current_node := current_node.next;
 
          exit when current_node = null;
+
       end loop;
       Put_Line("");
+
+   end;
+
+   function compress (list : p_node) return Unbounded_String is
+      output : Unbounded_String;
+      current_node : p_node := list;
+   begin
+
+      loop
+         Append(output, Ada.Strings.Fixed.Trim(Integer'Image(current_node.element), Ada.Strings.Left));
+         current_node := current_node.next;
+
+         exit when current_node = null;
+
+      end loop;
+      return output;
+
+   end compress;
+
+   procedure test (expected : String; list : p_node; test_message : String) is
+      actual : Unbounded_String;
+      state : String(1..1) := " ";
+   begin
+      actual := compress(list);
+
+      if To_Unbounded_String(expected) = actual then
+         state := "x";
+      end if;
+
+      Put_Line("[" & state & "]" & test_message);
+
+--        pragma Assert(To_Unbounded_String(expected) = actual,
+--                      "Failed asserting that " & expected & " is equal to " & To_String(actual) & ".");
    end;
 
 begin
 
-   Put_Line("====================================================");
-   Put_Line("Insert order: 1 2 3 4 5");
-
+   -- Trying to insert 1 2 3 4 5
    insert(one, list);
-   put(list);
    insert(two, list);
-   put(list);
    insert(three, list);
-   put(list);
    insert(four, list);
-   put(list);
    insert(five, list);
-   put(list);
 
-   Put_Line("====================================================");
-   Put_Line("Insert order: 3 4 1 5 1");
+   test("12345", list, "Inserts already ordered nodes");
 
+   -- Trying to insert 3 4 1 5 1
    list := null;
    insert(three, list);
-   put(list);
    insert(four, list);
-   put(list);
    insert(one, list);
-   put(list);
    insert(five, list);
-   put(list);
    insert(one, list);
-   put(list);
 
-   Put_Line("====================================================");
-   Put_Line("Insert order: 5 4 3 2 1");
+   test("11345", list, "Accepts duplicate nodes");
 
+   -- Trying to insert 5 4 3 2 1
    list := null;
    insert(five, list);
-   put(list);
    insert(four, list);
-   put(list);
    insert(three, list);
-   put(list);
    insert(two, list);
-   put(list);
    insert(one, list);
-   put(list);
 
+   test("12345", list, "Inserts nodes in opposite order");
 
 end Main;
