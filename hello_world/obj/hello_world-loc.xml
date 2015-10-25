@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Locations >
-  <Project>
-    <vfs_file>/home/mike/workspace/ada-exercises/hello_world/hello_world.gpr</vfs_file>
+  <Project >
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/mike/workspace/ada-exercises/hello_world/hello_world.gpr</vfs_project>
       <vfs_file>/home/mike/workspace/ada-exercises/hello_world/src/main.adb</vfs_file>
@@ -10,9 +9,25 @@
       <vfs_project>/home/mike/workspace/ada-exercises/hello_world/hello_world.gpr</vfs_project>
       <vfs_file>/home/mike/workspace/ada-exercises/hello_world/src/main.adb</vfs_file>
     </file_marker>
-    <file_marker current="true" column=" 1" line=" 1" >
+    <file_marker column=" 1" line=" 1" >
       <vfs_project />
       <vfs_file>/home/mike/workspace/ada-exercises/variable_swap/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/mike/workspace/ada-exercises/hello_world/hello_world.gpr</vfs_project>
+      <vfs_file>/home/mike/workspace/ada-exercises/hello_world/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 9" >
+      <vfs_project>/home/mike/workspace/ada-exercises/hello_world/hello_world.gpr</vfs_project>
+      <vfs_file>/home/mike/workspace/ada-exercises/hello_world/src/main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>/home/mike/workspace/ada-exercises/linked_lists/linked_lists.gpr</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/mike/workspace/ada-exercises/hello_world/hello_world.gpr</vfs_project>
+      <vfs_file>/home/mike/workspace/ada-exercises/hello_world/src/main.adb</vfs_file>
     </file_marker>
   </Project>
   <Project >
