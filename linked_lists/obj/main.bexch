@@ -4,6 +4,8 @@ b__main.o
 /home/mike/workspace/ada-exercises/linked_lists/linked_lists.gpr
 20151021092636
 [BOUND OBJECT FILES]
+/home/mike/workspace/ada-exercises/linked_lists/obj/variable_length255.o
+/home/mike/workspace/ada-exercises/linked_lists/obj/linked_list.o
 /home/mike/workspace/ada-exercises/linked_lists/obj/main.o
 [GENERATED SOURCE FILES]
 b__main.ads

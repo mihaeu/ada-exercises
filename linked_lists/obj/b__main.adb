@@ -27,6 +27,7 @@ package body ada_main is
    E015 : Short_Integer; pragma Import (Ada, E015, "system__secondary_stack_E");
    E110 : Short_Integer; pragma Import (Ada, E110, "ada__strings__unbounded_E");
    E045 : Short_Integer; pragma Import (Ada, E045, "ada__text_io_E");
+   E137 : Short_Integer; pragma Import (Ada, E137, "linked_list_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -203,6 +204,7 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E045 := E045 + 1;
+      E137 := E137 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -238,6 +240,8 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
+   --   /home/mike/workspace/ada-exercises/linked_lists/obj/variable_length255.o
+   --   /home/mike/workspace/ada-exercises/linked_lists/obj/linked_list.o
    --   /home/mike/workspace/ada-exercises/linked_lists/obj/main.o
    --   -L/home/mike/workspace/ada-exercises/linked_lists/obj/
    --   -L/home/mike/workspace/ada-exercises/linked_lists/obj/
