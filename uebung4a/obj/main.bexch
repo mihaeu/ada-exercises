@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/mike/workspace/ada-exercises/uebung4a/default.gpr
+20151118075205
+[BOUND OBJECT FILES]
+/home/mike/workspace/ada-exercises/uebung4a/obj/max.o
+/home/mike/workspace/ada-exercises/uebung4a/obj/person.o
+/home/mike/workspace/ada-exercises/uebung4a/obj/max_person.o
+/home/mike/workspace/ada-exercises/uebung4a/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/mike/workspace/ada-exercises/uebung4a/obj/
+-L/home/mike/workspace/ada-exercises/uebung4a/obj/
+-L/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/
+-static
+-static-libgcc
+/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/libgnat.a
