@@ -1,0 +1,21 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+/home/mike/workspace/ada-exercises/generic_list/linked_lists.gpr
+20151021092636
+[BOUND OBJECT FILES]
+/home/mike/workspace/ada-exercises/generic_list/obj/linked_list.o
+/home/mike/workspace/ada-exercises/generic_list/obj/person.o
+/home/mike/workspace/ada-exercises/generic_list/obj/person_linked_list.o
+/home/mike/workspace/ada-exercises/generic_list/obj/main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-L/home/mike/workspace/ada-exercises/generic_list/obj/
+-L/home/mike/workspace/ada-exercises/generic_list/obj/
+-L/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/
+-static
+-static-libgcc
+/home/mike/opt/gnat-gpl-2015-x86_64-linux-bin/lib/gcc/x86_64-pc-linux-gnu/4.9.3/adalib/libgnat.a
