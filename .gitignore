@@ -3,3 +3,24 @@
 
 # Ada Library Information
 *.ali
+
+*.a
+*.gli
+*.exe
+*.gcda
+*.gcno
+*.gcov
+*.bexch
+*.deps
+*.pyc
+*/config.log
+*/config.status
+*/obj/*
+!gps/obj/gps-gdb.py
+.#*
+./Makefile
+.gpsrcs
+.gpssnprj
+Makefile.common
+b~*
+b__*
