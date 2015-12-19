@@ -1,0 +1,28 @@
+with predicates; use predicates;
+
+procedure Main is
+    -- Indexbereich 0 bist Natural'Last
+    type ArrayInt is array (natural range <>) of integer;
+
+    function filter (v: ArrayInt; x: Integer; p: predicate) return ArrayInt is
+	temp: ArrayInt(v'range);
+	j: Integer := 0;
+
+	begin
+		for i in v'range loop
+			if p(x, v(i)) then
+				temp(i) := v(i);
+				j := j + 1;
+			end if;
+		end loop;
+		-- funktioniert nicht wenn keine Elemente gefunden werden
+		-- aber in Ada gibt es dafür ein Null-Array, das keine
+		-- Fehler wirft
+		return (temp(0..j - 1));
+end filter;
+
+
+begin
+   --  Insert code here.
+   null;
+end Main;
